@@ -1,154 +1,145 @@
-# Tetris Souls Full Stack
+### Repository Name
 
-A full-stack evolution of the original Tetris Souls project, combining a browser-based Tetris experience with the Yii PHP Framework to provide server-side functionality, persistent player data, and scalable web application architecture.
+`multithread-performance-analysis`
 
-While preserving the fast-paced and highly challenging gameplay of the original version, this project extends the experience beyond the browser by integrating game data with a backend system capable of managing player information, progression, and application-level features.
+### Description
+
+Performance benchmarking project developed in C++, evaluating execution times across multiple thread configurations and dataset sizes as part of an Advanced Programming Laboratory course.
+
+# Multithread Performance Analysis
+
+A performance benchmarking project developed in C++ for the Advanced Programming Laboratory course, focused on analyzing the impact of thread count and dataset size on execution time.
+
+The project investigates how computational workloads behave under different levels of parallelism, measuring execution times across multiple thread configurations and input sizes. The results were collected, averaged over multiple executions, and analyzed through tables and graphical reports.
 
 ## Overview
 
-Tetris Souls Full Stack was developed to explore both game development and web application architecture within a single project.
+The objective of this project was to study the practical effects of multithreading on application performance.
 
-The application combines a real-time JavaScript game engine with a PHP backend powered by Yii Framework, demonstrating how browser games can interact with server-side systems for data persistence and user management.
+Several experiments were executed using varying numbers of threads and different dataset sizes, allowing the observation of scalability behavior, processing overhead, and execution trends under increasing workloads.
 
-The project covers concepts from front-end game development as well as MVC architecture, database integration, and web application design.
-
-## Technology Stack
-
-### Front-End
-
-* JavaScript
-* HTML5
-* CSS3
-
-### Back-End
-
-* PHP
-* Yii Framework
-
-### Data Layer
-
-* MySQL
+Performance measurements were collected and statistically averaged to reduce the influence of isolated execution variations.
 
 ## Features
 
-### Gameplay
+* Multithreaded workload execution
+* Performance benchmarking
+* Execution time analysis
+* Scalability evaluation
+* Comparative testing across thread counts
+* Dataset size variation experiments
+* Statistical averaging of multiple executions
+* Graph generation and result visualization
 
-* Classic Tetris-inspired mechanics
-* Real-time piece movement
-* Piece rotation system
-* Collision detection
-* Dynamic board rendering
-* Progressive difficulty
-* Score tracking
-* Level progression
+## Experimental Configuration
 
-### Web Platform Features
-
-* Yii Framework integration
-* MVC architecture
-* Persistent player data
-* Database-driven storage
-* Server-side processing
-* Session management
-* Structured application routing
-* Scalable backend architecture
-
-## Architecture
-
-The project follows a separation between game logic and application infrastructure.
-
-### Front-End Responsibilities
-
-* Rendering game elements
-* Managing user input
-* Collision detection
-* Piece generation
-* Score calculation
-* Visual updates
-
-### Back-End Responsibilities
-
-* User data management
-* Persistent storage
-* Application routing
-* Session handling
-* Database communication
-* Business logic
-
-## Technical Highlights
-
-### Game Development
-
-* Real-time game loop
-* Grid-based architecture
-* Dynamic DOM manipulation
-* Event-driven interactions
-* State management
-* Collision detection algorithms
-
-### Web Development
-
-* MVC architecture with Yii Framework
-* Database integration
-* Backend and frontend communication
-* Server-side data persistence
-* Structured application organization
-* Scalable web application design
-
-## Project Structure
+### Thread Counts Tested
 
 ```text
-project/
-├── assets/
-├── css/
-├── js/
-├── protected/
-│   ├── controllers/
-│   ├── models/
-│   ├── views/
-│   └── components/
-├── themes/
-├── index.php
-└── README.md
+4
+16
+32
+64
+128
+256
+512
+1024
+2048
+4096
 ```
 
-## Requirements
+### Dataset Sizes
 
-### Server Requirements
+```text
+32K
+64K
+128K
+256K
+512K
+1024K
+2048K
+```
 
-* PHP 5.6+
-* MySQL
-* Apache or Nginx
-* Yii Framework
+Each configuration was executed multiple times and the final results were calculated using arithmetic averages.
 
-## Installation
+## Technical Concepts Demonstrated
 
-Clone the repository:
+* Parallel Programming
+* Multithreading
+* Performance Benchmarking
+* Scalability Analysis
+* Execution Time Measurement
+* Statistical Data Analysis
+* Experimental Methodology
+* Performance Evaluation
+
+## Methodology
+
+The benchmarking process followed these steps:
+
+1. Generate a workload of a specific size.
+2. Execute the workload using a predefined number of threads.
+3. Measure execution time.
+4. Repeat the execution multiple times.
+5. Calculate average execution times.
+6. Compare results across configurations.
+7. Generate visual reports and graphs.
+
+This methodology minimizes isolated system effects and provides more reliable performance measurements.
+
+## Results
+
+The experiments demonstrated a clear relationship between workload size, thread count, and execution time.
+
+The collected data allowed the identification of:
+
+* Performance growth patterns
+* Thread management overhead
+* Scalability limitations
+* Resource constraints
+* Computational cost under increasing workloads
+
+The final report includes detailed tables and charts illustrating the behavior of each configuration.
+
+## Development Environment
+
+### Hardware
+
+* Intel Core i3-4130T @ 3.60 GHz
+* 4 GB RAM
+
+### Software
+
+* Linux (Kali Rolling x64)
+* C++
+* POSIX Threads (Pthreads)
+
+## Building
+
+Compile the project using GCC:
 
 ```bash
-git clone https://github.com/your-username/tetris-souls-fullstack.git
+g++ main.cpp -o benchmark -pthread
 ```
 
-Configure database access:
+## Running
 
-```php
-return [
-    'connectionString' => 'mysql:host=localhost;dbname=tetris_souls',
-    'username' => 'root',
-    'password' => '',
-];
+Execute the benchmark:
+
+```bash
+./benchmark
 ```
 
-Start the local server and access the application through your browser.
+The application will run the configured experiments and generate performance measurements for later analysis.
 
 ## Educational Purpose
 
-This project was developed to bridge the gap between browser-based game development and traditional web application development.
+This project was developed as part of the Advanced Programming Laboratory curriculum to explore practical aspects of parallel computing and performance optimization.
 
-By combining JavaScript game mechanics with the Yii Framework, it demonstrates how interactive applications can leverage both client-side performance and server-side capabilities within a unified architecture.
+The primary goal was to understand how execution time is affected by increasing workload sizes and thread counts, while gaining hands-on experience with concurrent programming and benchmarking methodologies.
 
 ## Author
 
 Yan Matheus Gonçalves Fontão
 
-Game Development • Full Stack Development • JavaScript • PHP • Yii Framework
+Advanced Programming Laboratory • C++ • Multithreading • Performance Analysis
