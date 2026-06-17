@@ -1,11 +1,3 @@
-### Repository Name
-
-`multithread-performance-analysis`
-
-### Description
-
-Performance benchmarking project developed in C++, evaluating execution times across multiple thread configurations and dataset sizes as part of an Advanced Programming Laboratory course.
-
 # Multithread Performance Analysis
 
 A performance benchmarking project developed in C++ for the Advanced Programming Laboratory course, focused on analyzing the impact of thread count and dataset size on execution time.
